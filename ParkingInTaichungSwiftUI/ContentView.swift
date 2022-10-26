@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @ObservedObject private var dataManager = DataManager()
+    @EnvironmentObject private var dataManager: DataManager
     
     var body: some View {
         MapView()
+            .edgesIgnoringSafeArea(.all)
             .environmentObject(dataManager)
     }
 }

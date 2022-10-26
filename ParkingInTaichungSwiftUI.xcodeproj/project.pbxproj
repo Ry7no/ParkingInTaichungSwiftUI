@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B2EBC4D7BECD543C1C3B8ABA /* Pods_ParkingInTaichungSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 742E3A0CEC9E13DD69B302F5 /* Pods_ParkingInTaichungSwiftUI.framework */; };
+		FD6F646B2906CB300000BC20 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6F646A2906CB300000BC20 /* LocationManager.swift */; };
 		FDF5EF3F290677630048B589 /* ParkingInTaichungSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF5EF3E290677630048B589 /* ParkingInTaichungSwiftUIApp.swift */; };
 		FDF5EF41290677630048B589 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF5EF40290677630048B589 /* ContentView.swift */; };
 		FDF5EF43290677640048B589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDF5EF42290677640048B589 /* Assets.xcassets */; };
@@ -17,6 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50D7C51D15AB3BAD56254B67 /* Pods-ParkingInTaichungSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkingInTaichungSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-ParkingInTaichungSwiftUI/Pods-ParkingInTaichungSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+		742E3A0CEC9E13DD69B302F5 /* Pods_ParkingInTaichungSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkingInTaichungSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CB0316D1E8E5623DF328904 /* Pods-ParkingInTaichungSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkingInTaichungSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-ParkingInTaichungSwiftUI/Pods-ParkingInTaichungSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
+		FD6F646A2906CB300000BC20 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		FD6F646F2908F8600000BC20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDF5EF3B290677630048B589 /* ParkingInTaichungSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkingInTaichungSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF5EF3E290677630048B589 /* ParkingInTaichungSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingInTaichungSwiftUIApp.swift; sourceTree = "<group>"; };
 		FDF5EF40290677630048B589 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2EBC4D7BECD543C1C3B8ABA /* Pods_ParkingInTaichungSwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		410A274A8501590CD4384CCB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				742E3A0CEC9E13DD69B302F5 /* Pods_ParkingInTaichungSwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BEC95EBC87AA50FEFEA47E1B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50D7C51D15AB3BAD56254B67 /* Pods-ParkingInTaichungSwiftUI.debug.xcconfig */,
+				8CB0316D1E8E5623DF328904 /* Pods-ParkingInTaichungSwiftUI.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FDF5EF32290677630048B589 = {
 			isa = PBXGroup;
 			children = (
 				FDF5EF3D290677630048B589 /* ParkingInTaichungSwiftUI */,
 				FDF5EF3C290677630048B589 /* Products */,
+				BEC95EBC87AA50FEFEA47E1B /* Pods */,
+				410A274A8501590CD4384CCB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,6 +84,7 @@
 		FDF5EF3D290677630048B589 /* ParkingInTaichungSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				FD6F646F2908F8600000BC20 /* Info.plist */,
 				FDF5EF4C290678130048B589 /* Model */,
 				FDF5EF4E2906781E0048B589 /* ViewModel */,
 				FDF5EF4D290678190048B589 /* View */,
@@ -96,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				FDF5EF4F2906AD830048B589 /* DataManager.swift */,
+				FD6F646A2906CB300000BC20 /* LocationManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -107,17 +136,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDF5EF49290677640048B589 /* Build configuration list for PBXNativeTarget "ParkingInTaichungSwiftUI" */;
 			buildPhases = (
+				FF2203D84B1101EABDEADC78 /* [CP] Check Pods Manifest.lock */,
 				FDF5EF37290677630048B589 /* Sources */,
 				FDF5EF38290677630048B589 /* Frameworks */,
 				FDF5EF39290677630048B589 /* Resources */,
+				993F7BBE920D4D4D787FB71D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ParkingInTaichungSwiftUI;
-			packageProductDependencies = (
-			);
 			productName = ParkingInTaichungSwiftUI;
 			productReference = FDF5EF3B290677630048B589 /* ParkingInTaichungSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -138,7 +167,7 @@
 				};
 			};
 			buildConfigurationList = FDF5EF36290677630048B589 /* Build configuration list for PBXProject "ParkingInTaichungSwiftUI" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -146,8 +175,6 @@
 				Base,
 			);
 			mainGroup = FDF5EF32290677630048B589;
-			packageReferences = (
-			);
 			productRefGroup = FDF5EF3C290677630048B589 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -169,6 +196,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		993F7BBE920D4D4D787FB71D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ParkingInTaichungSwiftUI/Pods-ParkingInTaichungSwiftUI-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ParkingInTaichungSwiftUI/Pods-ParkingInTaichungSwiftUI-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ParkingInTaichungSwiftUI/Pods-ParkingInTaichungSwiftUI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF2203D84B1101EABDEADC78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ParkingInTaichungSwiftUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FDF5EF37290677630048B589 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -176,6 +245,7 @@
 			files = (
 				FDF5EF41290677630048B589 /* ContentView.swift in Sources */,
 				FDF5EF502906AD830048B589 /* DataManager.swift in Sources */,
+				FD6F646B2906CB300000BC20 /* LocationManager.swift in Sources */,
 				FDF5EF542906B6FB0048B589 /* MapView.swift in Sources */,
 				FDF5EF522906AE770048B589 /* ParkingLot.swift in Sources */,
 				FDF5EF3F290677630048B589 /* ParkingInTaichungSwiftUIApp.swift in Sources */,
@@ -301,6 +371,7 @@
 		};
 		FDF5EF4A290677640048B589 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50D7C51D15AB3BAD56254B67 /* Pods-ParkingInTaichungSwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,7 +380,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ParkingInTaichungSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 48394HVWDA;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = /Users/ryanwork/MyProjects/ParkingInTaichungSwiftUI/ParkingInTaichungSwiftUI/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "需要定位權限來取得附近車位相關資訊，是否允許此App獲取您的定位？";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "需要定位權限來取得附近車位相關資訊，是否允許此App獲取您的定位？";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -331,6 +405,7 @@
 		};
 		FDF5EF4B290677640048B589 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CB0316D1E8E5623DF328904 /* Pods-ParkingInTaichungSwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -339,7 +414,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ParkingInTaichungSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 48394HVWDA;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = /Users/ryanwork/MyProjects/ParkingInTaichungSwiftUI/ParkingInTaichungSwiftUI/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "需要定位權限來取得附近車位相關資訊，是否允許此App獲取您的定位？";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "需要定位權限來取得附近車位相關資訊，是否允許此App獲取您的定位？";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

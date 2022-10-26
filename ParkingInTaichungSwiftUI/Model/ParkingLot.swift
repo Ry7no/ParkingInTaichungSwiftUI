@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ParkingLot: Codable {
-    let Section_ID: String
-    let PS_ID: String
-    let PS_type: String
-    let PS_Lat: String
-    let PS_Lng: String
-    let status: String
+    var Section_ID: String = ""
+    var PS_ID: String = ""
+    var PS_type: String = ""
+    var PS_Lat: String = ""
+    var PS_Lng: String = ""
+    var status: String = ""
 }

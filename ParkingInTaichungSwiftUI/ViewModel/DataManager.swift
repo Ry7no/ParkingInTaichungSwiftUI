@@ -7,16 +7,19 @@
 
 import SwiftUI
 
-
-
 class DataManager: ObservableObject {
     
     @Published var fetchedParkingLots = [ParkingLot]()
     @Published var availableParkingLots = [ParkingLot]()
     @Published var unavailableParkingLots = [ParkingLot]()
     
+    @Published var isUpdatingMapView: Bool = false
+    @Published var isReloadingCamera: Bool = false
+    
+    @Published var radius: CGFloat = 100
+    
     init() {
-        getParkingData()
+
     }
     
     func getParkingData() {
@@ -36,6 +39,11 @@ class DataManager: ObservableObject {
                         let decoder = JSONDecoder()
                         // decode 從 json 解碼，返回一個指定類型的值，這個類型必須符合 Decodable 協議
                         DispatchQueue.main.async {
+                            
+                            self.fetchedParkingLots.removeAll()
+                            self.availableParkingLots.removeAll()
+                            self.unavailableParkingLots.removeAll()
+                            
                             self.fetchedParkingLots = try! decoder.decode([ParkingLot].self, from: data)
                             print(self.fetchedParkingLots.count)
                             
@@ -62,6 +70,28 @@ class DataManager: ObservableObject {
             } else {
                 print("Invalid URL.")
             }
+        
+//        return fetchedParkingLots
+    }
+    
+    func parkingLotType(Type: String) -> String {
+        
+        var typeString: String = ""
+        
+        switch Type {
+        case "0":
+            typeString = "一般"
+        case "1":
+            typeString = "身障"
+        case "2":
+            typeString = "卸貨"
+        case "4":
+            typeString = "親子"
+        default:
+            typeString = "一般"
+        }
+        
+        return typeString
     }
     
 
